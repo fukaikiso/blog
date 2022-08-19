@@ -1,7 +1,9 @@
 <template>
   <div>
+    <!-- 导航栏 -->
     <fly-header></fly-header>
 
+    <!-- banenr -->
     <div class="banner">
       <div class="stage">
         <div class="space"></div>
@@ -22,8 +24,10 @@
       </div>
     </div>
 
+    <!-- 主体内容 -->
     <div class="main">
       <div class="wrapper">
+        <!-- 项目展示 -->
         <div class="part cite" id="project">
           <div class="header clearfix">
             <h3 class="fl">项目展示</h3>
@@ -40,7 +44,7 @@
             </a>
           </div>
         </div>
-
+        <!-- 整活专区 -->
         <div class="part cite" id="special">
           <div class="header clearfix">
             <h3 class="fl">整活专区</h3>
@@ -57,7 +61,7 @@
             </router-link>
           </div>
         </div>
-
+        <!-- 官方文档 -->
         <div class="part" id="docs">
           <div class="header clearfix">
             <h3 class="fl">官方文档</h3>
@@ -77,7 +81,7 @@
             </a>
           </div>
         </div>
-
+        <!-- 技术教程 -->
         <div class="part" id="tutorial">
           <div class="header clearfix">
             <h3 class="fl">技术教程</h3>
@@ -99,7 +103,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 页尾 -->
     <fly-footer></fly-footer>
   </div>
 </template>
@@ -118,7 +122,7 @@ export default {
   },
   mounted() {
     this.axios.get('/json/index.json').then((res) => {
-      console.log('res :>> ', res)
+      // console.log('res :>> ', res)
       this.tutorials = res.data.tutorials
       this.docs = res.data.docs
     })

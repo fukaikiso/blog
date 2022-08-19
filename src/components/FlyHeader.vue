@@ -65,6 +65,9 @@ export default {}
 </script>
 
 <style scoped>
+.fly-header {
+  background-color: #fff;
+}
 .wrapper {
   width: 1240px;
   margin: 0 auto;

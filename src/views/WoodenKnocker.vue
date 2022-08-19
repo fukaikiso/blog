@@ -1,10 +1,15 @@
 <template>
   <div>
+    <!-- 头部导航栏 -->
     <fly-header></fly-header>
 
+    <!-- 面包屑导航 -->
+    <fly-breadcrumb :pathList="path"></fly-breadcrumb>
+
+    <!-- 主体内容 -->
     <div class="main">
       <div class="wrapper clearfix">
-        <h3>敲木鱼(点击图片)</h3>
+        <h3>敲木鱼</h3>
         <img src="/image/cite/woodenKnocker/woodenKnocker.jpg" alt="" @click="play()" class="knocker" />
         <audio src="/audio/woodenKnocker/woodenKnocker.mp3" ref="knock"></audio>
         <pre>
@@ -19,6 +24,10 @@
       </div>
     </div>
 
+    <!-- 技术介绍 -->
+    <fly-tech-desc :techDesc="techDesc"></fly-tech-desc>
+
+    <!-- 页尾 -->
     <fly-footer></fly-footer>
   </div>
 </template>
@@ -26,8 +35,23 @@
 <script>
 import FlyHeader from '@/components/FlyHeader.vue'
 import FlyFooter from '@/components/FlyFooter.vue'
+import FlyBreadcrumb from '../components/FlyBreadecrumb.vue'
+import FlyTechDesc from '@/components/FlyTechDesc.vue'
 export default {
-  components: { FlyHeader, FlyFooter },
+  components: { FlyHeader, FlyFooter, FlyBreadcrumb, FlyTechDesc },
+  data() {
+    return {
+      path: [
+        { pid: 1, title: '首页', href: '/' },
+        { pid: 2, title: '整活专区', href: '/' },
+        { pid: 3, title: '敲木鱼', href: '/wooden-knocker' },
+      ],
+      techDesc: {
+        desc: '利用HTML5及CSS3新特性，当鼠标划入图片时，修改指针图片为小棒槌，当点击图片时，棒槌改变，且播放锤击声音。',
+        tech: 'HTML5、CSS3',
+      },
+    }
+  },
   methods: {
     play() {
       this.$refs.knock.play()
@@ -37,13 +61,18 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  width: 1240px;
+  margin: 0 auto;
+}
+
 .main {
   background-color: #f2f5f8;
 }
 
 .main .wrapper {
   background-color: #fff;
-  padding: 30px 0;
+  padding: 30px 0 100px;
 }
 
 .main .wrapper h3 {
