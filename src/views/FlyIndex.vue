@@ -17,7 +17,9 @@
       <div class="wrapper">
         <div class="title">fukaikiso的个人小站</div>
         <div class="search">
-          <input type="text" placeholder="请输入关键词" />
+          <input
+            type="text"
+            placeholder="请输入关键词" />
           <button>搜索</button>
         </div>
         <div class="bear"></div>
@@ -28,52 +30,85 @@
     <div class="main">
       <div class="wrapper">
         <!-- 项目展示 -->
-        <div class="part cite" id="project">
+        <div
+          class="part cite"
+          id="project">
           <div class="header clearfix">
             <h3 class="fl">项目展示</h3>
-            <a href="#" class="fr">
+            <a
+              href="#"
+              class="fr">
               <span>更多&nbsp;</span>
-              <img src="@/assets/img/plus.png" alt="" />
+              <img
+                src="@/assets/img/plus.png"
+                alt="" />
             </a>
           </div>
           <div class="items">
-            <a href="#" class="block">
-              <img src="/image/cite/developing.png" alt="" />
-              <h4>蛋糕店项目展示</h4>
-              <p title="蛋糕店品牌理念、蛋糕展示，以及登录购买蛋糕蛋糕店品牌理念、蛋糕展示，以及登录购买蛋糕">蛋糕店品牌理念、蛋糕展示，以及登录购买蛋糕蛋糕店品牌理念、蛋糕展示，以及登录购买蛋糕</p>
+            <a
+              href="http://veg.fukaikiso.cn/"
+              class="block">
+              <img
+                src="/image/cite/veg/veg.png"
+                alt="" />
+              <h4>五叶蔬菜商店项目展示</h4>
+              <p title="使用Vue搭建蔬菜商店，包含首页、商品列表、商品详情、心愿单、购物车、、登录、注册、用户个人信息等页面">使用Vue搭建蔬菜商店，包含首页、商品列表、商品详情、心愿单、购物车、、登录、注册、用户个人信息等页面</p>
             </a>
           </div>
         </div>
         <!-- 整活专区 -->
-        <div class="part cite" id="special">
+        <div
+          class="part cite"
+          id="special">
           <div class="header clearfix">
             <h3 class="fl">整活专区</h3>
-            <a href="#" class="fr">
+            <a
+              href="#"
+              class="fr">
               <span>更多&nbsp;</span>
-              <img src="@/assets/img/plus.png" alt="" />
+              <img
+                src="@/assets/img/plus.png"
+                alt="" />
             </a>
           </div>
           <div class="items">
-            <router-link to="/wooden-knocker" class="block">
-              <img src="/image/cite/woodenKnocker/woodenKnocker.jpg" alt="" />
+            <router-link
+              to="/wooden-knocker"
+              class="block">
+              <img
+                src="/image/cite/woodenKnocker/woodenKnocker.jpg"
+                alt="" />
               <h4>敲木鱼</h4>
               <p title="人生就像一场戏，因为有缘才相聚。">人生就像一场戏，因为有缘才相聚。</p>
             </router-link>
           </div>
         </div>
         <!-- 官方文档 -->
-        <div class="part" id="docs">
+        <div
+          class="part"
+          id="docs">
           <div class="header clearfix">
             <h3 class="fl">官方文档</h3>
-            <a href="#" class="fr">
+            <a
+              href="#"
+              class="fr">
               <span>更多&nbsp;</span>
-              <img src="@/assets/img/plus.png" alt="更多&nbsp;" />
+              <img
+                src="@/assets/img/plus.png"
+                alt="更多&nbsp;" />
             </a>
           </div>
           <div class="items">
-            <a :href="d.href" class="block" v-for="d in docs" :key="d.did">
+            <a
+              :href="d.href"
+              class="block"
+              v-for="d in docs"
+              :key="d.did">
               <div class="top clearfix">
-                <img :src="d.img" class="icon" alt="" />
+                <img
+                  :src="d.img"
+                  class="icon"
+                  alt="" />
                 <h4>{{ d.title }}</h4>
                 <i>&gt;</i>
               </div>
@@ -82,18 +117,31 @@
           </div>
         </div>
         <!-- 技术教程 -->
-        <div class="part" id="tutorial">
+        <div
+          class="part"
+          id="tutorial">
           <div class="header clearfix">
             <h3 class="fl">技术教程</h3>
-            <a href="#" class="fr">
+            <a
+              href="#"
+              class="fr">
               <span>更多&nbsp;</span>
-              <img src="@/assets/img/plus.png" alt="更多&nbsp;" />
+              <img
+                src="@/assets/img/plus.png"
+                alt="更多&nbsp;" />
             </a>
           </div>
           <div class="items">
-            <a :href="t.href" class="block" v-for="t in tutorials" :key="t.tid">
+            <a
+              :href="t.href"
+              class="block"
+              v-for="t in tutorials"
+              :key="t.tid">
               <div class="top clearfix">
-                <img :src="t.img" class="icon" alt="" />
+                <img
+                  :src="t.img"
+                  class="icon"
+                  alt="" />
                 <h4>{{ t.title }}</h4>
                 <i>&gt;</i>
               </div>
@@ -109,8 +157,8 @@
 </template>
 
 <script>
-import FlyHeader from '@/components/FlyHeader.vue'
-import FlyFooter from '@/components/FlyFooter.vue'
+import FlyHeader from '@/components/FlyHeader.vue';
+import FlyFooter from '@/components/FlyFooter.vue';
 // import indexData from '../../public/json/index.json'
 export default {
   components: { FlyHeader, FlyFooter },
@@ -118,16 +166,16 @@ export default {
     return {
       tutorials: [],
       docs: [],
-    }
+    };
   },
   mounted() {
     this.axios.get('/json/index.json').then((res) => {
       // console.log('res :>> ', res)
-      this.tutorials = res.data.tutorials
-      this.docs = res.data.docs
-    })
+      this.tutorials = res.data.tutorials;
+      this.docs = res.data.docs;
+    });
   },
-}
+};
 </script>
 
 <style scoped>
