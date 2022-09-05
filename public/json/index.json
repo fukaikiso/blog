@@ -23,7 +23,7 @@
     },
     {
       "tid": 4,
-      "title": "菜鸟教程",
+      "title": "w3resource",
       "img": "/image/reference/w3resource.png",
       "desc": "W3resource development tutorials on HTML, CSS, JS, PHP, SQL, MySQL, PostgreSQL, MongoDB, JSON and more.",
       "href": "https://www.w3resource.com/"

@@ -44,15 +44,34 @@
                 alt="" />
             </a>
           </div>
+
           <div class="items">
             <a
               href="http://veg.fukaikiso.cn/"
               class="block">
               <img
-                src="/image/cite/veg/veg.png"
+                src="/image/cite/display/veg.png"
                 alt="" />
-              <h4>五叶蔬菜商店项目展示</h4>
+              <h4>五叶蔬菜商店</h4>
               <p title="使用Vue搭建蔬菜商店，包含首页、商品列表、商品详情、心愿单、购物车、、登录、注册、用户个人信息等页面">使用Vue搭建蔬菜商店，包含首页、商品列表、商品详情、心愿单、购物车、、登录、注册、用户个人信息等页面</p>
+            </a>
+            <a
+              href="https://github.com/fukaikiso/fresh"
+              class="block">
+              <img
+                src="/image/cite/display/fresh.png"
+                alt="" />
+              <h4>福瑞仕企业门户网站</h4>
+              <p title="使用React搭建企业门户网站，包含首页、公司动态、商品列表、购物车、登录注册等页面">使用React搭建企业门户网站，包含首页、公司动态、商品列表、购物车、登录注册等页面</p>
+            </a>
+            <a
+              href="https://github.com/fukaikiso/youming"
+              class="block">
+              <img
+                src="/image/cite/display/youming.png"
+                alt="" />
+              <h4>悠明影院-微信小程序</h4>
+              <p title="使用微信开发者工具开发影院小程序，使用腾讯位置服务，实现定位当前城市、搜索周边影院功能，基于云存储实现微信登录及修改个人信息功能">使用微信开发者工具开发影院小程序，使用腾讯位置服务，实现定位当前城市、搜索周边影院功能，基于云存储实现微信登录及修改个人信息功能</p>
             </a>
           </div>
         </div>
